@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bernardo's Page</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="/static/Image-Bernardo.jpeg" alt="Bernardo's Profile Picture" class="profile-pic">
+      </a>
+      <h1>Welcome to Bernardo's Page</h1>
+
+      <form method="POST" class="search-form">
+        <label for="section">What would you like to view?</label>
+        <input type="text" name="section" id="section" placeholder="e.g. resume, skills..." required>
+        <button type="submit">Go</button>
+      </form>
+
+      <form method="POST" class="quick-options">
+        <p>Try typing or clicking one of the options:</p>
+        <div class="option-buttons">
+          <button type="submit" name="section" value="resume">Resume</button>
+          <button type="submit" name="section" value="skills">Skills</button>
+          <button type="submit" name="section" value="contact">Contact</button>
+          <button type="submit" name="section" value="experience">Experience</button>
+          <button type="submit" name="section" value="github">GitHub</button>
+          <button type="submit" name="section" value="linkedin">LinkedIn</button>
+        </div>
+      </form>
+    </header>
+
+    {% if section %}
+    <main>
+      {% if section == 'resume' %}
+        <h2>Resume</h2>
+        <img src="/static/Resume Bernardo.png" alt="Bernardo's Resume" class="resume-image">
+        
+        <p>
+          <a href="/static/Bernardo-Resume.pdf" download style="font-weight: bold; color: #007bff; text-decoration: none;">
+            📄 Click here to download my resume
+          </a>
+        </p>
+
+      {% elif section == 'skills' %}
+        <h2>Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>Flask</li>
+          <li>GitHub</li>
+          <li>Teamwork</li>
+          <li>Communication</li>
+          <li>Problem Solving</li>
+          <li>Time Management</li>
+          <li>Adaptability</li>
+          <li>Responsibility</li>
+        </ul>
+
+      {% elif section == 'contact' %}
+        <h2>Contact</h2>
+        <p>Email: beteston@gmail.com</p>
+        <p>Phone: +55 (47) 99758-3470</p>
+        <p>WhatsApp: 
+          <a href="https://wa.me/5547997583470" target="_blank">
+            Send me a message!
+          </a>
+        </p>
+        <p>Instagram: 
+          <a href="https://www.instagram.com/bernardo_t09/" target="_blank">
+            bernardo_t09
+          </a>
+        </p>
+
+      {% elif section == 'experience' %}
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <div class="experience-item">
+            <h3>Library Assistant – Madonna University</h3>
+            <p class="date">2024 – Present</p>
+            <ul>
+              <li>Provided technical and research support to students in the university library</li>
+              <li>Maintained organization of digital resources and assisted in managing the book database</li>
+              <li>Strengthened attention to detail and problem-solving in a professional academic setting</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Team Member – Madonna Soccer Team</h3>
+            <p class="date">2024 – Present</p>
+            <ul>
+              <li>Balanced a full academic schedule with athletics, demonstrating time management and discipline</li>
+              <li>Contributed to team performance, strategy, and leadership on and off the field</li>
+              <li>Built strong communication and collaboration skills — key in both team projects and tech development</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Volunteer Tech Educator – Brazil</h3>
+            <ul>
+              <li>Taught basic computer and internet skills to children in orphanages</li>
+              <li>Helped bridge the digital divide and inspired interest in technology</li>
+              <li>Developed patience, empathy, and the ability to explain technical topics in simple terms</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>International Student Experience</h3>
+            <ul>
+              <li>Adapted to a new academic culture and language while pursuing a degree in Computer Science</li>
+              <li>Gained global perspective and cultural sensitivity — valuable in diverse work environments</li>
+              <li>Navigated responsibilities independently, showcasing self-discipline and maturity</li>
+            </ul>
+          </div>
+        </section>
+
+      {% elif section == 'github' %}
+        <h2>GitHub</h2>
+        <p>Check out my projects at: 
+          <a href="https://github.com/BernardoTeston/My-projects" target="_blank">
+            github.com/BernardoTeston/My-projects
+          </a>
+        </p>
+
+      {% elif section == 'linkedin' %}
+        <h2>LinkedIn</h2>
+        <p>Connect with me on LinkedIn: 
+          <a href="https://www.linkedin.com/in/bernardoteston/" target="_blank">
+            linkedin.com/in/bernardoteston
+          </a>
+        </p>
+
+      {% else %}
+        <p><strong>Oops!</strong> I don’t recognize that section. Try: resume, skills, contact, experience, github, or linkedin.</p>
+      {% endif %}
+    </main>
+    {% endif %}
+
+    <footer>
+      <p>&copy; 2025 Bernardo Teston</p>
+    </footer>
+  </div>
+</body>
+</html>
