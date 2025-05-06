@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Poppins', sans-serif;
-    background: #0d1b2a; /* deep navy blue */
+    background: #0d1b2a; 
     color: #ffffff;
     min-height: 100vh;
     display: flex;
@@ -169,3 +169,6 @@
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
   }
   
+a{
+  color: #007bff;
+}
